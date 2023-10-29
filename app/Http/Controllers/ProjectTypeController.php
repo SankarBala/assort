@@ -20,7 +20,7 @@ class ProjectTypeController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.project_type.create');
     }
 
     /**
@@ -28,7 +28,9 @@ class ProjectTypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        ProjectType::create($request->all());
+        session()->flash('message', 'Successfully created');
+        return redirect()->route('admin.project_type.index');
     }
 
     /**
@@ -36,7 +38,7 @@ class ProjectTypeController extends Controller
      */
     public function show(ProjectType $projectType)
     {
-        //
+        return view('admin.project_type.show');
     }
 
     /**
@@ -44,7 +46,7 @@ class ProjectTypeController extends Controller
      */
     public function edit(ProjectType $projectType)
     {
-        //
+        return view('admin.project_type.edit');
     }
 
     /**
@@ -52,7 +54,9 @@ class ProjectTypeController extends Controller
      */
     public function update(Request $request, ProjectType $projectType)
     {
-        //
+        $projectType->update($request->all());
+        session()->flash('message', 'Successfully updated');
+        return redirect()->back();
     }
 
     /**
@@ -60,6 +64,8 @@ class ProjectTypeController extends Controller
      */
     public function destroy(ProjectType $projectType)
     {
-        //
+        $projectType->delete();
+        session()->flash('message', 'Successfully deleted');
+        return redirect()->route('admin.project_type.index');
     }
 }

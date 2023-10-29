@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Area;
+use App\Models\Country;
+use App\Models\Location;
 use App\Models\Project;
+use App\Models\ProjectType;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -12,7 +16,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        view()->share('projects', Project::all());
+        return view('admin.project.index');
     }
 
     /**
@@ -20,7 +25,12 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        view()->share('project_types', ProjectType::all());
+        view()->share('locations', Location::all());
+        view()->share('areas', Area::all());
+        view()->share('countries', Country::all());
+
+        return view('admin.project.create');
     }
 
     /**
@@ -36,7 +46,7 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        //
+        return view('admin.project.show');
     }
 
     /**
@@ -44,7 +54,7 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        //
+        return view('admin.project.edit');
     }
 
     /**

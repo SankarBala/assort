@@ -12,7 +12,7 @@ class AreaController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.area.index');
     }
 
     /**
@@ -20,7 +20,7 @@ class AreaController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.area.create');
     }
 
     /**
@@ -36,7 +36,7 @@ class AreaController extends Controller
      */
     public function show(Area $area)
     {
-        //
+        return view('admin.area.show');
     }
 
     /**
@@ -44,7 +44,7 @@ class AreaController extends Controller
      */
     public function edit(Area $area)
     {
-        //
+        return view('admin.area.edit');
     }
 
     /**

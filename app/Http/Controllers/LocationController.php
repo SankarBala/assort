@@ -12,7 +12,7 @@ class LocationController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.location.index');
     }
 
     /**
@@ -20,7 +20,7 @@ class LocationController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.location.create');
     }
 
     /**
@@ -36,7 +36,7 @@ class LocationController extends Controller
      */
     public function show(Location $location)
     {
-        //
+        return view('admin.location.show');
     }
 
     /**
@@ -44,7 +44,7 @@ class LocationController extends Controller
      */
     public function edit(Location $location)
     {
-        //
+        return view('admin.location.edit');
     }
 
     /**
