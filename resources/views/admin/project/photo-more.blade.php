@@ -11,7 +11,6 @@
             </ol>
         </nav>
 
-
         <div class="card shadow mb-4">
             <div class="card-header text-center"><i class="fas fa-plus-circle"></i> Add Project Photo</div>
             <!--/.card-header-->
@@ -105,46 +104,57 @@
 
                         <tbody>
 
-                            <tr>
-                                <td align="center" width="10%">
-                                    <img src='../../../images/projects/1629369776-hafsa1.jpg'
-                                        class='rounded img-responsive img-fluid' style='width:80px;'>
-                                </td>
+                            @foreach ($project->galleries as $gallery)
+                                <tr>
+                                    <td align="center" width="10%">
+                                        <img src="{{ asset($gallery->link) }}" class='rounded img-responsive img-fluid'
+                                            style='width:80px;'>
+                                    </td>
 
-                                <td>Assort Hafsha Manor</td>
+                                    <td>{{ $gallery->title }}</td>
 
-                                <td align="center" width="10%">2021-08-19 20:42:56</td>
+                                    <td align="center" width="10%">{{ $gallery->created_at }}</td>
 
-                                <td align="center" width="8%">
-                                    <font color='green'><b>Active</b></font>
-                                </td>
+                                    <td align="center" width="8%">
+                                        <font color='green'><b>{{ $gallery->status ? 'active' : 'inactive' }}</b></font>
+                                    </td>
 
-                                <td align="center" width="25%">
+                                    <td align="center" width="25%">
 
-                                    <a href="../../project-photo-edit/1/index.html"><button type="button"
-                                            class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i>
-                                            Edit</button></a>
+                                        {{-- <a href="../../project-photo-edit/1/index.html"><button type="button"
+                                                class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i>
+                                                Edit</button></a>
 
-                                    <a href="../../project-photo-photo/1/index.html"><button type="button"
-                                            class="btn btn-outline-warning btn-sm"><i class="fas fa-image"></i>
-                                            Photo</button></a>
+                                        <a href="../../project-photo-photo/1/index.html"><button type="button"
+                                                class="btn btn-outline-warning btn-sm"><i class="fas fa-image"></i>
+                                                Photo</button></a> --}}
 
-                                    <a href="../../project-photo-delete/1/index.html"><button type="button"
-                                            class="btn btn-outline-danger btn-sm"><i class="fas fa-trash-alt"></i>
-                                            Delete</button></a>
 
-                                </td>
-                            </tr>
+                                        <form class="d-inline" name="form1" method="POST" enctype="multipart/form-data"
+                                            action="{{ route('admin.gallery.destroy', $gallery) }}">
+                                            @csrf
+                                            @method('delete')
+
+                                            <button type="submit" class="btn btn-outline-danger btn-sm"><i
+                                                    class="fas fa-trash-alt"></i>
+                                                Delete</button>
+                                        </form>
+
+
+                                    </td>
+                                </tr>
+                            @endforeach
+
                         </tbody>
                     </table>
-                </div><!--table-responsive-->
+                </div>
+            </div>
+        </div>
 
-            </div><!--/.card-body-->
-        </div><!--/.card-->
-        {{-- <a href="{{ route('admin.project.index') }}">
+        <a href="{{ route('admin.project.index') }}">
             <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fas fa-list"></i> Project
                 List</button>
-        </a> --}}
+        </a>
 
     </div>
 @endsection

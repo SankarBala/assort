@@ -1,0 +1,139 @@
+
+/* gallery specific CSS */
+
+.constraimg img{
+  height: 420px;
+}
+
+@media screen and (max-width:480px){
+  .constraimg img{
+  height: 100%;
+  width: 100%;
+}
+}
+
+.constrabigimg img{
+  height: 55%;
+  /* width: 75%; */
+}
+
+@media screen and (max-width:480px){
+  .constrabigimg img{
+  height: 75%;
+  width: 75%;
+}
+}
+
+.constragallery .col-sm-4 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px auto;
+  margin-bottom: 10px;
+
+}
+.constragallery .card {
+position: relative;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-direction: column;
+flex-direction: column;
+min-width: 318px;
+word-wrap: break-word;
+background-color: #fff;
+background-clip: border-box;
+border: 1px solid rgba(0,0,0,.125);
+border-radius: 10px;
+
+}
+
+.-fx-gal-image-thumb img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  filter: grayscale(0%);
+  transition: all 0.3s ease;
+}
+
+.-fx-gal-image-thumb:hover img {
+
+  width: 100%;
+  cursor: pointer;
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  filter: grayscale(0%);
+
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}
+
+.-fx-gal-image-thumb:focus + .-fx-gal-image-big {
+  display: block;
+}
+
+.-fx-gal-image-big {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(5, 10, 15, 0.8);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;s
+  transition: all 0.3s ease;
+}
+
+.-fx-gal-image-big img {
+  width: auto;
+  height: 90%;
+  position: absolute;
+  box-shadow: 0px 0px 800px 40px rgba(0, 0, 0, 0.9);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width:480px) {
+  .-fx-gal-image-big img {
+  width: 80%;
+  height: 60%;
+  position: absolute;
+  box-shadow: 0px 0px 800px 40px rgba(0, 0, 0, 0.9);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+}
+.contenta {
+position: absolute;
+bottom: 0;
+background: rgb(0, 0, 0);
+background: rgba(0, 0, 0, 0.5);
+color: #f1f1f1;
+width: 100%;
+padding: 10px;
+height: 70px;
+
+}
+.contenta:hover{
+  width: 100%;
+  cursor: pointer;
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  filter: grayscale(0%);
+
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}
+
+.galtitle {
+color: white;
+font-size: 14px;
+text-align: center;
+}
+

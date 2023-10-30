@@ -13,7 +13,7 @@ class GalleryController extends Controller
      */
     public function index()
     {
-       return view('admin.project.photo-more');
+        return view('admin.project.photo-more');
     }
 
     /**
@@ -61,6 +61,7 @@ class GalleryController extends Controller
      */
     public function destroy(Gallery $gallery)
     {
-        //
+        $gallery->delete();
+        return redirect()->back();
     }
 }

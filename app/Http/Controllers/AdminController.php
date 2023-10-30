@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use App\Models\ProjectType;
+use App\Models\Site;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -17,6 +18,7 @@ class AdminController extends Controller
 
     public function site_details()
     {
+        view()->share('site', Site::first());
         return view('admin.site');
     }
 

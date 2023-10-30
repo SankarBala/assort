@@ -19,7 +19,7 @@ class BaseController extends Controller
 
     public function message_from_md()
     {
-        return view('message-from-md');
+        return view('md-message');
     }
 
     public function contact_us()

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Area;
 use App\Models\Country;
+use App\Models\Gallery;
 use App\Models\Location;
 use App\Models\Project;
 use App\Models\ProjectType;
@@ -192,7 +193,7 @@ class ProjectController extends Controller
     {
         view()->share('project', $project);
 
-        // $project->load('galleries');
+        $project->load('galleries');
 
         // dd($project->toArray());
 
@@ -223,4 +224,12 @@ class ProjectController extends Controller
         session()->flush('message', 'Photo successfully added.');
         return redirect()->back();
     }
+
+    // public function delete_photos(Gallery $gallery)
+    // {
+
+    //     dd($gallery);
+
+    //     $project->galleries()->delete();
+    // }
 }

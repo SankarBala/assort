@@ -24,10 +24,6 @@ Route::get('/', [AdminController::class, 'home'])->name('home');
 Route::get('/site-details', [AdminController::class, 'site_details'])->name('site-details');
 Route::get('/site-edit', [AdminController::class, 'site_edit'])->name('site-edit');
 Route::get('/site-logo', [AdminController::class, 'site_logo'])->name('site-logo');
-// Route::get('term-of-use', [BaseController::class, 'term_of_use'])->name('term-of-use');
-// Route::get('about-us', [BaseController::class, 'about_us'])->name('about-us');
-// Route::get('contact-us', [BaseController::class, 'contact_us'])->name('contact-us');
-// Route::get('message-from-md', [BaseController::class, 'message_from_md'])->name('message-from-md');
 
 Route::resource('project', ProjectController::class)->names('project');
 Route::get('/project/{project}/photo', [ProjectController::class, 'photo'])->name('project.photo.show');
@@ -36,6 +32,7 @@ Route::delete('/project/{project}/photo', [ProjectController::class, 'photo_dele
 
 Route::get('/project/{project}/photos/all', [ProjectController::class, 'all_photos'])->name('project.photos.all');
 Route::post('/project/{project}/photos/add', [ProjectController::class, 'add_photo'])->name('project.photos.add');
+Route::delete('/project/{project}/photos/{gallery}/delete', [ProjectController::class, 'delete_photo'])->name('project.photos.photo.delete');
 
 
 Route::resource('gallery', GalleryController::class)->names('gallery');
