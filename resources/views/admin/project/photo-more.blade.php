@@ -5,8 +5,8 @@
 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="http://localhost/assortpropertiesltd.com/admin">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="../../project-list/index.html">Project List</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.home') }}">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.project.index') }}">Project List</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Project More Photo</li>
             </ol>
         </nav>
@@ -17,23 +17,26 @@
             <!--/.card-header-->
             <div class="card-body">
 
-
-
-                <form name="form1" method="POST" enctype="multipart/form-data" action="#">
-
+                <form name="form" method="POST" enctype="multipart/form-data"
+                    action="{{ route('admin.project.photos.add', $project) }}">
+                    @csrf
                     <div class="row">
                         <div class="col-sm-2">
                             <font size="3" color="#808080"><b>Photo Title</b></font>
                         </div>
-                        <div class="col-sm-10"><input name="project_photo_title" type="text" class="form-control"
-                                placeholder="enter name" value=""></div>
+                        <div class="col-sm-10">
+                            <input name="project_photo_title" type="text" class="form-control"
+                                placeholder="Enter name" />
+                        </div>
                     </div>
 
                     <div class="row">
                         <div class="col-sm-2">
                             <font size="3" color="#808080"><b>Upload Photo</b></font>
                         </div>
-                        <div class="col-sm-10"><input name="file_name" type="file" id="file_name"></div>
+                        <div class="col-sm-10">
+                            <input name="photo" type="file" id="file_name" accept="image/*" />
+                        </div>
                     </div>
 
                     <br>
@@ -138,10 +141,10 @@
 
             </div><!--/.card-body-->
         </div><!--/.card-->
-        <a href="../../project-list/index.html">
+        {{-- <a href="{{ route('admin.project.index') }}">
             <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fas fa-list"></i> Project
                 List</button>
-        </a>
+        </a> --}}
 
     </div>
 @endsection

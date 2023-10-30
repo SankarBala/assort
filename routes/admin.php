@@ -30,7 +30,17 @@ Route::get('/site-logo', [AdminController::class, 'site_logo'])->name('site-logo
 // Route::get('message-from-md', [BaseController::class, 'message_from_md'])->name('message-from-md');
 
 Route::resource('project', ProjectController::class)->names('project');
+Route::get('/project/{project}/photo', [ProjectController::class, 'photo'])->name('project.photo.show');
+Route::post('/project/{project}/photo', [ProjectController::class, 'photo_update'])->name('project.photo.store');
+Route::delete('/project/{project}/photo', [ProjectController::class, 'photo_delete'])->name('project.photo.delete');
+
+Route::get('/project/{project}/photos/all', [ProjectController::class, 'all_photos'])->name('project.photos.all');
+Route::post('/project/{project}/photos/add', [ProjectController::class, 'add_photo'])->name('project.photos.add');
+
+
 Route::resource('gallery', GalleryController::class)->names('gallery');
+
+
 Route::resource('user', UserController::class)->names('user');
 Route::resource('project-type', ProjectTypeController::class)->names('project-type');
 Route::resource('area', AreaController::class)->names('area');

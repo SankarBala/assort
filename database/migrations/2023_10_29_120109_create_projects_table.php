@@ -31,13 +31,13 @@ return new class extends Migration
             $table->string('hand_over')->nullable();
             $table->string('details')->nullable();
             $table->string('photo')->nullable();
-            $table->string('added_by')->nullable();
-            $table->string('updated_by')->nullable();
-            $table->string('add_date')->nullable();
-            $table->string('update_date')->nullable();
-            $table->string('featured')->nullable();
-            $table->string('views')->nullable();
-            $table->string('status')->nullable();
+            $table->string('created_by')->default(1);
+            $table->string('updated_by')->default(1);
+            // $table->string('add_date')->nullable();
+            // $table->string('update_date')->nullable();
+            $table->string('featured')->default(0);
+            $table->integer('views')->default(0);
+            $table->string('status')->default(1);
             $table->timestamps();
         });
     }

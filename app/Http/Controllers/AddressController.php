@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Gallery;
-use App\Models\Project;
+use App\Models\Address;
 use Illuminate\Http\Request;
 
-class GalleryController extends Controller
+class AddressController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-       return view('admin.project.photo-more');
+        //
     }
 
     /**
@@ -35,7 +34,7 @@ class GalleryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Gallery $gallery)
+    public function show(Address $address)
     {
         //
     }
@@ -43,7 +42,7 @@ class GalleryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Gallery $gallery)
+    public function edit(Address $address)
     {
         //
     }
@@ -51,7 +50,7 @@ class GalleryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Gallery $gallery)
+    public function update(Request $request, Address $address)
     {
         //
     }
@@ -59,7 +58,7 @@ class GalleryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Gallery $gallery)
+    public function destroy(Address $address)
     {
         //
     }

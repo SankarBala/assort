@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
+use App\Models\ProjectType;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
     public function home()
     {
+        view()->share('projects', Project::all());
+        view()->share('project_types', ProjectType::all());
         return view('admin.home');
     }
 

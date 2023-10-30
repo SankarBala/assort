@@ -10,6 +10,7 @@ class Gallery extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['project_id', 'image', 'title', 'link', 'type'];
 
     public function project(): BelongsTo
     {

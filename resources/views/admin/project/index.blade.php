@@ -104,13 +104,13 @@
                                                 class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i>
                                                 Edit</button></a>
 
-                                        <a href="{{ route('admin.project.edit', $project) }}">
+                                        <a href="{{ route('admin.project.photo.show', $project) }}">
                                             <button type="button" class="btn btn-outline-warning btn-sm"><i
                                                     class="fas fa-image"></i>
                                                 Photo</button>
                                         </a>
 
-                                        <a href="{{ route('admin.project.edit', $project) }}">
+                                        <a href="{{ route('admin.project.photos.all', $project) }}">
                                             <button type="button" class="btn btn-outline-success btn-sm">
                                                 <i class="fas fa-image"></i>
                                                 More Photo</button>

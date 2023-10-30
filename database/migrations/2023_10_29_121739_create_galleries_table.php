@@ -16,6 +16,8 @@ return new class extends Migration
             $table->foreignId('project_id');
             $table->string('title')->nullable();
             $table->string('slug')->nullable();
+            $table->string('link')->nullable();
+            $table->string('type')->default('image');
             $table->boolean('status')->default(1);
             $table->integer('created_by')->default(1);
             $table->integer('updated_by')->default(1);
