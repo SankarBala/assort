@@ -26,13 +26,13 @@ Route::get('/site-edit', [AdminController::class, 'site_edit'])->name('site-edit
 Route::get('/site-logo', [AdminController::class, 'site_logo'])->name('site-logo');
 
 Route::resource('project', ProjectController::class)->names('project');
-Route::get('/project/{project}/photo', [ProjectController::class, 'photo'])->name('project.photo.show');
-Route::post('/project/{project}/photo', [ProjectController::class, 'photo_update'])->name('project.photo.store');
-Route::delete('/project/{project}/photo', [ProjectController::class, 'photo_delete'])->name('project.photo.delete');
+Route::get('/project/{project:slug}/photo', [ProjectController::class, 'photo'])->name('project.photo.show');
+Route::post('/project/{project:slug}/photo', [ProjectController::class, 'photo_update'])->name('project.photo.store');
+Route::delete('/project/{project:slug}/photo', [ProjectController::class, 'photo_delete'])->name('project.photo.delete');
 
-Route::get('/project/{project}/photos/all', [ProjectController::class, 'all_photos'])->name('project.photos.all');
-Route::post('/project/{project}/photos/add', [ProjectController::class, 'add_photo'])->name('project.photos.add');
-Route::delete('/project/{project}/photos/{gallery}/delete', [ProjectController::class, 'delete_photo'])->name('project.photos.photo.delete');
+Route::get('/project/{project:slug}/photos/all', [ProjectController::class, 'all_photos'])->name('project.photos.all');
+Route::post('/project/{project:slug}/photos/add', [ProjectController::class, 'add_photo'])->name('project.photos.add');
+Route::delete('/project/{project:slug}/photos/{gallery}/delete', [ProjectController::class, 'delete_photo'])->name('project.photos.photo.delete');
 
 
 Route::resource('gallery', GalleryController::class)->names('gallery');

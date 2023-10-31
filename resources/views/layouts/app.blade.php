@@ -29,21 +29,19 @@
 
     <title>Basic Builders Limited</title>
 
-    <link rel="icon" type="image/png" href="images/favicon.html">
-    <link rel="shortcut icon" type="image/x-icon" href="frontend/image/car_favicon.html">
+    <link rel="stylesheet" href="{{ asset('frontend/plugins/bootstrap/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/plugins/fontawesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/plugins/animate-css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/plugins/slick/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/plugins/slick/slick-theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/plugins/colorbox/colorbox.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/fonts/icomoon/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/corousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/gallery.css') }}">
 
-    <link rel="stylesheet" href="frontend/plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="frontend/plugins/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="frontend/plugins/animate-css/animate.css">
-    <link rel="stylesheet" href="frontend/plugins/slick/slick.css">
-    <link rel="stylesheet" href="frontend/plugins/slick/slick-theme.css">
-    <link rel="stylesheet" href="frontend/plugins/colorbox/colorbox.css">
-    <link rel="stylesheet" href="frontend/css/style.css">
-    <link rel="stylesheet" href="frontend/fonts/icomoon/style.css">
-    <link rel="stylesheet" href="frontend/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="frontend/css/bootstrap.min.css">
-    <link rel="stylesheet" href="frontend/css/corousel.css">
-    <link rel="stylesheet" href="frontend/css/gallery.css">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&amp;display=swap" rel="stylesheet">
@@ -58,19 +56,20 @@
     @yield('content')
     @include('layouts.footer')
 
-    <script src="frontend/plugins/jQuery/jquery.min.js"></script>
-    <script src="frontend/plugins/bootstrap/bootstrap.min.js" defer></script>
-    <script src="frontend/plugins/slick/slick.min.js"></script>
-    <script src="frontend/plugins/slick/slick-animation.min.js"></script>
-    <script src="frontend/plugins/colorbox/jquery.colorbox.js"></script>
-    <script src="frontend/plugins/shuffle/shuffle.min.js" defer></script>
-    <script src="frontend/plugins/google-map/map.js" defer></script>
-    <script src="frontend/js/script.js"></script>
-    <script src="frontend/js/jquery-3.3.1.min.js"></script>
-    <script src="frontend/js/popper.min.js"></script>
-    <script src="frontend/js/bootstrap.min.js"></script>
-    <script src="frontend/js/owl.carousel.min.js"></script>
-    <script src="frontend/js/main.js"></script>
+    <script src="{{ asset('frontend/plugins/jQuery/jquery.min.js') }}"></script>
+    <script src="{{ asset('frontend/plugins/bootstrap/bootstrap.min.js') }}" defer></script>
+    <script src="{{ asset('frontend/plugins/slick/slick.min.js') }}"></script>
+    <script src="{{ asset('frontend/plugins/slick/slick-animation.min.js') }}"></script>
+    <script src="{{ asset('frontend/plugins/colorbox/jquery.colorbox.js') }}"></script>
+    <script src="{{ asset('frontend/plugins/shuffle/shuffle.min.js') }}" defer></script>
+    <script src="{{ asset('frontend/plugins/google-map/map.js') }}" defer></script>
+    <script src="{{ asset('frontend/js/script.js') }}"></script>
+    <script src="{{ asset('frontend/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/popper.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/main.js') }}"></script>
+
     <script src="https_/maps.googleapis.com/maps/api/jsb0c1.html?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer>
     </script>
 

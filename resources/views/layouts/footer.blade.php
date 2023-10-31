@@ -4,8 +4,8 @@
             <div class="row justify-content-between">
                 <div class="col-lg-3 col-md-3 footer-widget footer-about">
 
-                    <a href="index.html" title="Assort Properties Ltd"><img loading="lazy" class="footer-logo"
-                            src="images/logo.png" alt="Assort Properties Ltd"></a>
+                    <a href="{{ route('home') }}" title="Assort Properties Ltd"><img loading="lazy" class="footer-logo"
+                            src="{{ asset('images/logo.png') }}" alt="Assort Properties Ltd"></a>
                     <p><i class="fas fa-building"></i> <b title="Assort Properties Ltd">Assort Properties Ltd</b>. Have
                         you
                         planned a big surprise for your family yet? An exclusive apartment project of Assort Properties
@@ -14,19 +14,19 @@
                 </div>
 
 
-                <div class="col-lg-9 col-md-9 footer-widget mt-5 mt-md-0">
+                <div class="col-lg-6 col-md-6 footer-widget mt-5 mt-md-0">
                     <h3 class="widget-title">Contact Us</h3>
                     <div class="contact">
                         <font size="5" title="Assort Properties Ltd"><b>Assort Properties Ltd</b></font><br>
                         <i class="fas fa-map-marker-alt"></i> <b>Address:</b> House-262/1 (3rd floor),<br>Road
                         No-10/A,West
                         Dhanmondi,Dhaka-1209<br>
-                        <!-- <i class="fas fa-mobile-alt"></i> <b>Mobile:</b> +8801988806471, +8801988806472, +8801988806470<br> -->
+                        <i class="fas fa-mobile-alt"></i> <b>Mobile:</b> +8801988806471, +8801988806472<br>
                         <i class="fa fa-phone"></i> <b>Phone:</b> +88-02-48112253<br>
                         <i class="fa fa-envelope"></i> <b>Email:</b> <a href="mailto:assortproperties@gmail.com"
-                            title="assortproperties@gmail.com">assortproperties@gmail.com</a><br>
-                        <i class="fa fa-globe"></i> <b>Web:</b> <a href="index.html"
-                            title="https://assortpropertiesltd.com">www.assortpropertiesltd.com</a>
+                            title="assortproperties@gmail.com">{{ $site->email }}</a><br>
+                        <i class="fa fa-globe"></i> <b>Web:</b> <a href="{{ $site->link }}"
+                            title="{{ $site->name }}">{{ $site->link }}</a>
                     </div>
                     <div class="footer-social">
                         <ul>
@@ -40,18 +40,32 @@
                     </div>
                 </div>
 
-                <!-- <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 footer-widget">
-        <h3 class="widget-title">Members</h3>
-        <div class="member">
-          
-          <li><a href="#"><img loading="lazy" class="footer-member"
-           alt="member"style="height: 21px;"></a></li>
-          <li><a href=""><img loading="lazy" class="footer-member"
-           alt="member"style="height: 20px;"></a></li>
-         
-        </div>
-      </div>
-       -->
+
+                <div class="widget-area col-md-3">
+                    <ul class="xoxo">
+                        <li id="text-11" class="widget-container widget_text list-unstyled">
+                            <h3 class="widget-title-footer">Members</h3>
+                            <div class="textwidget">
+                                <p>
+                                    <a href="https://www.rehab-bd.org/index.php?page=member_details&amp;companyID=">
+                                        <img decoding="async" loading="lazy" class="alignnone wp-image-19166"
+                                            src="{{asset('frontend/images/rehab.png')}}"
+                                            alt="" width="188" height="27"
+                                            sizes="(max-width: 188px) 100vw, 188px"></a>
+                                </p>
+                                <p>
+                                    <a href="http://www.rajuk.gov.bd/">
+                                        <img decoding="async" loading="lazy" class="alignnone wp-image-19167"
+                                            src="{{asset('frontend/images/rajuk.png')}}"
+                                            alt="" width="188" height="27"></a>
+                                </p>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
                 <!-- Col end -->
 
             </div><!-- Row end -->
@@ -63,7 +77,8 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="copyright-info">
-                        <span>Copyright &copy; 2023 <a href="index.html" title="Assort Properties Ltd">Assort Properties
+                        <span>Copyright &copy; 2023 <a href="{{ $site->link }}" title="Assort Properties Ltd">Assort
+                                Properties
                                 Ltd</a></span>
                     </div>
                 </div>

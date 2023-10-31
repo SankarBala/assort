@@ -6,15 +6,15 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 
-<!-- Mirrored from assortpropertiesltd.com/projects/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Oct 2023 17:44:09 GMT -->
+<!-- Mirrored from assortpropertiesltd.com/ongoing-projects/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Oct 2023 17:44:11 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
      
 
-<title>All Projects - Assort Properties Ltd</title>
+<title>Ongoing Projects - Assort Properties Ltd</title>
 <meta charset="UTF-8">
-<meta name="description" content="All Projects - Assort Properties Ltd" />
-<meta name="keywords" content="projects, Assort Properties Ltd" />
+<meta name="description" content="Ongoing Projects - Assort Properties Ltd" />
+<meta name="keywords" content="Ongoing Projects," />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="Googlebot" content="all" />
 <meta http-equiv="imagetoolbar" content="no" />
@@ -140,10 +140,10 @@
                   <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" title="Projects">Projects <i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu" role="menu">
                     <li>
-                      <a href="index.html" title="All Projects">All Projects</a>
+                      <a href="../projects/index.html" title="All Projects">All Projects</a>
                     </li>
                                           <li>
-                        <a href="../ongoing-projects/index.html" title="Ongoing Projects">Ongoing Projects</a>
+                        <a href="index.html" title="Ongoing Projects">Ongoing Projects</a>
                       </li>
                                           <li>
                         <a href="../upcoming-projects/index.html" title="Upcoming Projects">Upcoming Projects</a>
@@ -729,144 +729,16 @@
 		<nav aria-label="breadcrumb">
 		  <ol class="breadcrumb">
 		    <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home"></i>&nbsp; Home</a></li>
-		    <li class="breadcrumb-item active" aria-current="page">Projects</li>
+		    <li class="breadcrumb-item"><a href="../projects/index.html">Projects</a></li>
+		    <li class="breadcrumb-item active" aria-current="page">Ongoing Projects</li>
 		  </ol>
 		</nav>
 
 		<div class="project_details">
-			
-			<h1 align="center">All Projects</h1>
+
+			<h1 align="center">Ongoing Projects</h1>
 
 		    <div class="row">
-
-  <div class="col-lg-4 col-md-6 mb-4">
- 
-	
-  
-    <div class="latest-post">
-        <div class="latest-post-media">
-          <a href="../assort-hafsha-manor/index.html" class="latest-post-img">
-            <img loading="lazy" class="img-fluid" src="../images/projects/index.html" alt="img">
-          </a>
-          
-              <div class="imgname"><a href="../assort-hafsha-manor/index.html">Assort Hafsha Manor</a></div>
-
-              <div class="text-right"><a href="../assort-hafsha-manor/index.html"?>
-                <button type="button" class="btn btn-danger mt-4">Details</button>
-                </a>
-            </div>
-          
-           
-       </div><!--latest-post-media-->
-
-
-        <div class="post-body">
-
-
-
-
-        <!--
-          <h3 class="post-title"><a href="//"></a></h3>
-      -->
-      
-          <!--
-          <div class="latest-post-meta">
-            , 
-
-            <a href="//" title=""></a>, 
-
-            <a href="/" title=""></a>
-            
-          </div>.latest-post-meta-->
-        </div>
-    </div><!--.latest-post-->
-  </div><!--.col-lg-4 .col-md-6 .mb-4-->
-
-  <div class="col-lg-4 col-md-6 mb-4">
- 
-	
-  
-    <div class="latest-post">
-        <div class="latest-post-media">
-          <a href="../assort-khaled-homes/index.html" class="latest-post-img">
-            <img loading="lazy" class="img-fluid" src="../images/projects/index.html" alt="img">
-          </a>
-          
-              <div class="imgname"><a href="../assort-khaled-homes/index.html">Assort Khaled Homes</a></div>
-
-              <div class="text-right"><a href="../assort-khaled-homes/index.html"?>
-                <button type="button" class="btn btn-danger mt-4">Details</button>
-                </a>
-            </div>
-          
-           
-       </div><!--latest-post-media-->
-
-
-        <div class="post-body">
-
-
-
-
-        <!--
-          <h3 class="post-title"><a href="//"></a></h3>
-      -->
-      
-          <!--
-          <div class="latest-post-meta">
-            , 
-
-            <a href="//" title=""></a>, 
-
-            <a href="/" title=""></a>
-            
-          </div>.latest-post-meta-->
-        </div>
-    </div><!--.latest-post-->
-  </div><!--.col-lg-4 .col-md-6 .mb-4-->
-
-  <div class="col-lg-4 col-md-6 mb-4">
- 
-	
-  
-    <div class="latest-post">
-        <div class="latest-post-media">
-          <a href="../assort-sultana-manor/index.html" class="latest-post-img">
-            <img loading="lazy" class="img-fluid" src="../images/projects/1629626310-dd01.jpg" alt="img">
-          </a>
-          
-              <div class="imgname"><a href="../assort-sultana-manor/index.html">Assort Sultana Manor</a></div>
-
-              <div class="text-right"><a href="../assort-sultana-manor/index.html"?>
-                <button type="button" class="btn btn-danger mt-4">Details</button>
-                </a>
-            </div>
-          
-           
-       </div><!--latest-post-media-->
-
-
-        <div class="post-body">
-
-
-
-
-        <!--
-          <h3 class="post-title"><a href="//"></a></h3>
-      -->
-      
-          <!--
-          <div class="latest-post-meta">
-            , 
-
-            <a href="//" title=""></a>, 
-
-            <a href="/" title=""></a>
-            
-          </div>.latest-post-meta-->
-        </div>
-    </div><!--.latest-post-->
-  </div><!--.col-lg-4 .col-md-6 .mb-4-->
 
   <div class="col-lg-4 col-md-6 mb-4">
  
@@ -881,49 +753,6 @@
               <div class="imgname"><a href="../assort-kiron-vila/index.html">Assort Kiron Vila</a></div>
 
               <div class="text-right"><a href="../assort-kiron-vila/index.html"?>
-                <button type="button" class="btn btn-danger mt-4">Details</button>
-                </a>
-            </div>
-          
-           
-       </div><!--latest-post-media-->
-
-
-        <div class="post-body">
-
-
-
-
-        <!--
-          <h3 class="post-title"><a href="//"></a></h3>
-      -->
-      
-          <!--
-          <div class="latest-post-meta">
-            , 
-
-            <a href="//" title=""></a>, 
-
-            <a href="/" title=""></a>
-            
-          </div>.latest-post-meta-->
-        </div>
-    </div><!--.latest-post-->
-  </div><!--.col-lg-4 .col-md-6 .mb-4-->
-
-  <div class="col-lg-4 col-md-6 mb-4">
- 
-	
-  
-    <div class="latest-post">
-        <div class="latest-post-media">
-          <a href="../test/index.html" class="latest-post-img">
-            <img loading="lazy" class="img-fluid" src="../images/projects/1629104304-1628589412_jpg-3.jpg" alt="img">
-          </a>
-          
-              <div class="imgname"><a href="../test/index.html">Assort Sahera Homes</a></div>
-
-              <div class="text-right"><a href="../test/index.html"?>
                 <button type="button" class="btn btn-danger mt-4">Details</button>
                 </a>
             </div>
@@ -1003,221 +832,6 @@
   
     <div class="latest-post">
         <div class="latest-post-media">
-          <a href="../assort-abeda-castle-1628579381/index.html" class="latest-post-img">
-            <img loading="lazy" class="img-fluid" src="../images/projects/1629624653-caro7.jpg" alt="img">
-          </a>
-          
-              <div class="imgname"><a href="../assort-abeda-castle-1628579381/index.html">Assort Abeda Castle</a></div>
-
-              <div class="text-right"><a href="../assort-abeda-castle-1628579381/index.html"?>
-                <button type="button" class="btn btn-danger mt-4">Details</button>
-                </a>
-            </div>
-          
-           
-       </div><!--latest-post-media-->
-
-
-        <div class="post-body">
-
-
-
-
-        <!--
-          <h3 class="post-title"><a href="//"></a></h3>
-      -->
-      
-          <!--
-          <div class="latest-post-meta">
-            , 
-
-            <a href="//" title=""></a>, 
-
-            <a href="/" title=""></a>
-            
-          </div>.latest-post-meta-->
-        </div>
-    </div><!--.latest-post-->
-  </div><!--.col-lg-4 .col-md-6 .mb-4-->
-
-  <div class="col-lg-4 col-md-6 mb-4">
- 
-	
-  
-    <div class="latest-post">
-        <div class="latest-post-media">
-          <a href="../noor-castle-1628579635/index.html" class="latest-post-img">
-            <img loading="lazy" class="img-fluid" src="../images/projects/1629632211-rr.jpg" alt="img">
-          </a>
-          
-              <div class="imgname"><a href="../noor-castle-1628579635/index.html">Noor Castle</a></div>
-
-              <div class="text-right"><a href="../noor-castle-1628579635/index.html"?>
-                <button type="button" class="btn btn-danger mt-4">Details</button>
-                </a>
-            </div>
-          
-           
-       </div><!--latest-post-media-->
-
-
-        <div class="post-body">
-
-
-
-
-        <!--
-          <h3 class="post-title"><a href="//"></a></h3>
-      -->
-      
-          <!--
-          <div class="latest-post-meta">
-            , 
-
-            <a href="//" title=""></a>, 
-
-            <a href="/" title=""></a>
-            
-          </div>.latest-post-meta-->
-        </div>
-    </div><!--.latest-post-->
-  </div><!--.col-lg-4 .col-md-6 .mb-4-->
-
-  <div class="col-lg-4 col-md-6 mb-4">
- 
-	
-  
-    <div class="latest-post">
-        <div class="latest-post-media">
-          <a href="../test-1629096789/index.html" class="latest-post-img">
-            <img loading="lazy" class="img-fluid" src="../images/projects/1629096789-ready.jpg" alt="img">
-          </a>
-          
-              <div class="imgname"><a href="../test-1629096789/index.html">Flat-Picture-1</a></div>
-
-              <div class="text-right"><a href="../test-1629096789/index.html"?>
-                <button type="button" class="btn btn-danger mt-4">Details</button>
-                </a>
-            </div>
-          
-           
-       </div><!--latest-post-media-->
-
-
-        <div class="post-body">
-
-
-
-
-        <!--
-          <h3 class="post-title"><a href="//"></a></h3>
-      -->
-      
-          <!--
-          <div class="latest-post-meta">
-            , 
-
-            <a href="//" title=""></a>, 
-
-            <a href="/" title=""></a>
-            
-          </div>.latest-post-meta-->
-        </div>
-    </div><!--.latest-post-->
-  </div><!--.col-lg-4 .col-md-6 .mb-4-->
-
-  <div class="col-lg-4 col-md-6 mb-4">
- 
-	
-  
-    <div class="latest-post">
-        <div class="latest-post-media">
-          <a href="../test-2-1629097284/index.html" class="latest-post-img">
-            <img loading="lazy" class="img-fluid" src="../images/projects/1629097284-ready1.jpg" alt="img">
-          </a>
-          
-              <div class="imgname"><a href="../test-2-1629097284/index.html">Flat-Picture-2</a></div>
-
-              <div class="text-right"><a href="../test-2-1629097284/index.html"?>
-                <button type="button" class="btn btn-danger mt-4">Details</button>
-                </a>
-            </div>
-          
-           
-       </div><!--latest-post-media-->
-
-
-        <div class="post-body">
-
-
-
-
-        <!--
-          <h3 class="post-title"><a href="//"></a></h3>
-      -->
-      
-          <!--
-          <div class="latest-post-meta">
-            , 
-
-            <a href="//" title=""></a>, 
-
-            <a href="/" title=""></a>
-            
-          </div>.latest-post-meta-->
-        </div>
-    </div><!--.latest-post-->
-  </div><!--.col-lg-4 .col-md-6 .mb-4-->
-
-  <div class="col-lg-4 col-md-6 mb-4">
- 
-	
-  
-    <div class="latest-post">
-        <div class="latest-post-media">
-          <a href="../test-3-1629097437/index.html" class="latest-post-img">
-            <img loading="lazy" class="img-fluid" src="../images/projects/1629097437-ready2.jpg" alt="img">
-          </a>
-          
-              <div class="imgname"><a href="../test-3-1629097437/index.html">Flat-Picture-3</a></div>
-
-              <div class="text-right"><a href="../test-3-1629097437/index.html"?>
-                <button type="button" class="btn btn-danger mt-4">Details</button>
-                </a>
-            </div>
-          
-           
-       </div><!--latest-post-media-->
-
-
-        <div class="post-body">
-
-
-
-
-        <!--
-          <h3 class="post-title"><a href="//"></a></h3>
-      -->
-      
-          <!--
-          <div class="latest-post-meta">
-            , 
-
-            <a href="//" title=""></a>, 
-
-            <a href="/" title=""></a>
-            
-          </div>.latest-post-meta-->
-        </div>
-    </div><!--.latest-post-->
-  </div><!--.col-lg-4 .col-md-6 .mb-4-->
-
-  <div class="col-lg-4 col-md-6 mb-4">
- 
-	
-  
-    <div class="latest-post">
-        <div class="latest-post-media">
           <a href="../assort-maksud-garden-1698571914/index.html" class="latest-post-img">
             <img loading="lazy" class="img-fluid" src="../images/projects/index.html" alt="img">
           </a>
@@ -1254,11 +868,12 @@
         </div>
     </div><!--.latest-post-->
   </div><!--.col-lg-4 .col-md-6 .mb-4-->
-</div><!--.row-->		</div><!--.project_details-->
+</div><!--.row-->
+		</div><!--.project_details-->
 
 	</div><!--.container-->
 
-</section><!--#projects1--><footer id="footer" class="footer">
+</section><!--#projects--><footer id="footer" class="footer">
     <div class="footer-main">
       <div class="container">
         <div class="row justify-content-between">
@@ -1377,5 +992,5 @@
   </body>
 
   
-<!-- Mirrored from assortpropertiesltd.com/projects/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Oct 2023 17:44:10 GMT -->
+<!-- Mirrored from assortpropertiesltd.com/ongoing-projects/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Oct 2023 17:44:12 GMT -->
 </html>

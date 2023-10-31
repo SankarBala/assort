@@ -21,6 +21,13 @@ Route::get('term-of-use', [BaseController::class, 'term_of_use'])->name('term-of
 Route::get('about-us', [BaseController::class, 'about_us'])->name('about-us');
 Route::get('contact-us', [BaseController::class, 'contact_us'])->name('contact-us');
 Route::get('message-from-md', [BaseController::class, 'message_from_md'])->name('message-from-md');
+Route::get('land-wanted', [BaseController::class, 'land_wanted'])->name('land-wanted');
+Route::post('land-wanted', [BaseController::class, 'store_land_wanted'])->name('store-land-wanted');
+Route::get('flat-buy-sale', [BaseController::class, 'flat_buy_sale'])->name('flat-buy-sale');
+Route::post('flat-buy-sale', [BaseController::class, 'store_flat_buy_sale'])->name('store-flat-buy-sale');
 
-Route::resource('project', ProjectController::class)->names('project');
-Route::resource('gallery', GalleryController::class)->names('gallery');
+Route::get('project-type/{project_type:slug}', [BaseController::class, 'project_type'])->name('project-type');
+Route::get('projects', [BaseController::class, 'projects'])->name('projects');
+Route::get('project/{project:slug}', [BaseController::class, 'project'])->name('project');
+Route::get('search', [BaseController::class, 'search'])->name('search');
+// Route::resource('gallery', GalleryController::class)->names('gallery');

@@ -4,14 +4,15 @@
     <div class="container">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="https://assortpropertiesltd.com"><i class="fas fa-home"></i>&nbsp;
+                <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fas fa-home"></i>&nbsp;
                         Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Terms of Use</li>
             </ol>
         </nav>
         <div class="page_details">
-            <h1 align="center">Terms of Use</h1>
-            <br>
+            <h1 align="">Terms of Use</h1>
+            <hr/>
+            <br/>
             <b>Structural and General Engineering Features:</b><br />
             Project will be planned and designed by professional Architects, Structural, electrical and plumbing design
             engineers.<br />
@@ -174,6 +175,6 @@
             apartments with the view to maintaining the general affairs of the complex for common interest Each apartment
             owner must initially deposit TK25,000/- (Twenty Five Thousand Taka) only to the reserve fund before handing over
             apartments.
-        </div><!--.page_details-->
+        </div>
     </div>
 @endsection

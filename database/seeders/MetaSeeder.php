@@ -156,7 +156,7 @@ class MetaSeeder extends Seeder
             "revisit" => "7 days",
             "owner" => "Engr. Md. Jahid",
             "author" => "Engr. Md. Jahid",
-            "email" => "",
+            "email" => "assortproperties@gmail.com",
             "link" => "https://assortpropertiesltd.com",
             "copyright" => "Copyright © Assort Properties Ltd.",
             "logo" => "images/logo.png"
@@ -171,7 +171,7 @@ class MetaSeeder extends Seeder
         Location::insert($this->locations);
         Area::insert($this->areas);
         ProjectType::insert($this->project_types);
-        Project::insert($this->projects);
+        // Project::insert($this->projects);
 
         $user = User::create($this->user);
         $address = Address::create($this->address);
