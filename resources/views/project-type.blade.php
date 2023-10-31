@@ -23,7 +23,7 @@
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="latest-post">
                                 <div class="latest-post-media">
-                                    <a href="../assort-sultana-manor/index.html" class="latest-post-img">
+                                    <a href="{{ route('project', $project) }}" class="latest-post-img">
                                         <img loading="lazy" class="img-fluid" src="{{ asset($project->photo) }}"
                                             alt="img">
                                     </a>

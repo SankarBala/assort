@@ -154,7 +154,10 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+
+        session()->flush('message', 'Project successfully deleted.');
+        return redirect()->back();
     }
 
 

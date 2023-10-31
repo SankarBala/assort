@@ -1,7 +1,7 @@
 ﻿@extends('admin.layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container-fluid">
 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -15,9 +15,7 @@
         <div class="card shadow mb-4">
             <div class="card-header text-center"><i class="fas fa-list"></i> Project List ({{ $projects->count() }})</div>
             <!--/.card-header-->
-            <div class="card-body">
-
-
+            <div class="c">
                 <form class="form-inline mr-auto" method="POST" action="#">
 
                     <input class="form-control" type="text" placeholder="search by id / name / phone / email "
@@ -94,7 +92,7 @@
 
                                     </td>
 
-                                    <td width="35%">
+                                    <td min-width="">
 
                                         <a href="{{ route('admin.project.show', $project) }}"><button type="button"
                                                 class="btn btn-outline-dark btn-sm"><i class="fas fa-chart-area"></i>
@@ -113,8 +111,17 @@
                                         <a href="{{ route('admin.project.photos.all', $project) }}">
                                             <button type="button" class="btn btn-outline-success btn-sm">
                                                 <i class="fas fa-image"></i>
-                                                More Photo</button>
+                                                Gallery</button>
                                         </a>
+
+                                        <form class="d-inline" name="form1" method="POST" enctype="multipart/form-data"
+                                            action="{{ route('admin.project.destroy', $project) }}">
+                                            @csrf
+                                            @method('delete')
+                                            <button type="submit" class="btn btn-outline-danger btn-sm"><i
+                                                    class="fas fa-trash-alt"></i>
+                                                Delete</button>
+                                        </form>
 
                                     </td>
                                 </tr>
@@ -132,5 +139,5 @@
         </a>
 
     </div>
-    <!--.container-->
+    
 @endsection

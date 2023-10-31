@@ -53,7 +53,7 @@
                                 <tr><td>Generator Available</td><td>{{$project->generator}}</td></tr>
                                 <tr><td>Substation Available</td><td>{{$project->substation}}</td></tr>
                                 <tr><td>Unit</td><td>{{$project->unit}}</td></tr>
-                                <tr><td>Description</td><td>{{$project->description}}</td></tr>
+                                <tr><td>Description</td><td>{{$project->details}}</td></tr>
                             </tbody>
                         </table>
                     </div>
