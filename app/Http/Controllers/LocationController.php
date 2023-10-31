@@ -12,6 +12,7 @@ class LocationController extends Controller
      */
     public function index()
     {
+        view()->share('locations', Location::all());
         return view('admin.location.index');
     }
 
@@ -28,7 +29,13 @@ class LocationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $location = new Location();
+        $location->name = $request->name;
+        $location->slug = $request->slug;
+        $location->status = $request->status;
+        $location->save();
+        session()->flash('message', 'Location created successfully');
+        return redirect()->back();
     }
 
     /**
@@ -36,6 +43,7 @@ class LocationController extends Controller
      */
     public function show(Location $location)
     {
+        view()->share('location', $location);
         return view('admin.location.show');
     }
 
@@ -44,6 +52,7 @@ class LocationController extends Controller
      */
     public function edit(Location $location)
     {
+        view()->share('location', $location);
         return view('admin.location.edit');
     }
 
@@ -52,7 +61,12 @@ class LocationController extends Controller
      */
     public function update(Request $request, Location $location)
     {
-        //
+        $location->name = $request->name;
+        $location->slug = $request->slug;
+        $location->status = $request->status;
+        $location->save();
+        session()->flash('message', 'Location updated successfully');
+        return redirect()->back();
     }
 
     /**
@@ -60,6 +74,8 @@ class LocationController extends Controller
      */
     public function destroy(Location $location)
     {
-        //
+        $location->delete();
+        session()->flash('message', 'Location deleted successfully');
+        return redirect()->route('admin.location.index');
     }
 }

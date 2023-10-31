@@ -22,42 +22,35 @@
                     <div class="col-sm-2">
                         <font size="3" color="#808080"><b>ID</b></font>
                     </div>
-                    <div class="col-sm-10">1</div>
+                    <div class="col-sm-10">{{ $area->id }}</div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-2">
                         <font size="3" color="#808080"><b>Name</b></font>
                     </div>
-                    <div class="col-sm-10">Gulshan</div>
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-2">
-                        <font size="3" color="#808080"><b>Phone</b></font>
-                    </div>
-                    <div class="col-sm-10">gulshan</div>
+                    <div class="col-sm-10">{{ $area->name }}</div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-2">
                         <font size="3" color="#808080"><b>City</b></font>
                     </div>
-                    <div class="col-sm-10">Dhaka</div>
+                    <div class="col-sm-10">{{ $area->location->name }}</div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-2">
-                        <font size="3" color="#808080"><b>Add Date</b></font>
+                        <font size="3" color="#808080"><b>Create Date</b></font>
                     </div>
-                    <div class="col-sm-10">2021-07-11 20:05:59</div>
+                    <div class="col-sm-10">{{ $area->created_at }}</div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-2">
                         <font size="3" color="#808080"><b>Update Date</b></font>
                     </div>
-                    <div class="col-sm-10">2021-07-12 17:00:18</div>
+                    <div class="col-sm-10">{{ $area->updated_at }}</div>
                 </div>
 
                 <div class="row">
@@ -65,22 +58,22 @@
                         <font size="3" color="#808080"><b>Status</b></font>
                     </div>
                     <div class="col-sm-10">
-                        <font color='green'><b>Active</b></font>
+                        <font color='green'><b>{{ $area->status == true ? 'Active' : 'Inactive' }}</b></font>
                     </div>
                 </div>
 
             </div><!--./card-body\-->
         </div><!--./card\-->
 
-        <a href="../../area-add/index.html">
+        <a href="{{ route('admin.area.create') }}">
             <button type="button" class="btn btn-outline-primary btn-sm"><i class="fas fa-plus-circle"></i> Add</button>
         </a>
 
-        <a href="../../area-list/index.html">
+        <a href="{{ route('admin.area.index') }}">
             <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fas fa-list"></i> List</button>
         </a>
 
-        <a href="../../area-edit/1/index.html">
+        <a href="{{ route('admin.area.edit', $area) }}">
             <button type="button" class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i> Edit</button>
         </a>
 

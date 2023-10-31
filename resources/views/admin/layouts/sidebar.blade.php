@@ -53,7 +53,7 @@
             </div>
         </div>
     </li>
-
+{{-- 
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseGalleryPhotos"
             aria-expanded="true" aria-controls="collapseGalleryPhotos">
@@ -67,7 +67,7 @@
                 <a class="collapse-item" href="{{ route('admin.gallery.create') }}">Gallery Photo List</a>
             </div>
         </div>
-    </li>
+    </li> --}}
 
 
     <hr class="sidebar-divider">

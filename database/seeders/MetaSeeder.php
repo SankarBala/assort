@@ -171,7 +171,7 @@ class MetaSeeder extends Seeder
         Location::insert($this->locations);
         Area::insert($this->areas);
         ProjectType::insert($this->project_types);
-        // Project::insert($this->projects);
+        Project::insert($this->projects);
 
         $user = User::create($this->user);
         $address = Address::create($this->address);

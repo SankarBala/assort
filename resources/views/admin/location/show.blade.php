@@ -5,9 +5,8 @@
 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="../../index.html">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="../../city-add/index.html">Add City</a></li>
-                <li class="breadcrumb-item"><a href="../../city-list/index.html">City List</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.home') }}">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.location.index') }}">City List</a></li>
                 <li class="breadcrumb-item active" aria-current="page">City Details</li>
             </ol>
         </nav>
@@ -22,21 +21,21 @@
                     <div class="col-sm-2">
                         <font size="3" color="#808080"><b>ID</b></font>
                     </div>
-                    <div class="col-sm-10">1</div>
+                    <div class="col-sm-10">{{ $location->id }}</div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-2">
                         <font size="3" color="#808080"><b>Name</b></font>
                     </div>
-                    <div class="col-sm-10">Rajshahi</div>
+                    <div class="col-sm-10">{{ $location->name }}</div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-2">
-                        <font size="3" color="#808080"><b>Address</b></font>
+                        <font size="3" color="#808080"><b>Slug</b></font>
                     </div>
-                    <div class="col-sm-10">rajshahi</div>
+                    <div class="col-sm-10">{{ $location->slug }}</div>
                 </div>
 
                 <div class="row">
@@ -44,7 +43,7 @@
                         <font size="3" color="#808080"><b>Status</b></font>
                     </div>
                     <div class="col-sm-10">
-                        <font color='green'>Active</font>
+                        <font color='green'>{{ $location->id }}</font>
                     </div>
                 </div>
 
@@ -53,7 +52,8 @@
 
 
         <div class="card shadow mb-4">
-            <div class="card-header text-center"><i class="fas fa-list"></i> Area List (1) for Rajshahi City</div>
+            <div class="card-header text-center"><i class="fas fa-list"></i> Area List ({{ $location->areas->count() }}) in
+                {{ $location->name }}</div>
             <!--/.card-header-->
             <div class="card-body">
 
@@ -72,9 +72,6 @@
                                 </th>
                                 <th>
                                     <center>Slug</center>
-                                </th>
-                                <th>
-                                    <center>City</center>
                                 </th>
                                 <th>
                                     <center>Status</center>
@@ -97,9 +94,6 @@
                                     <center>Slug</center>
                                 </th>
                                 <th>
-                                    <center>City</center>
-                                </th>
-                                <th>
                                     <center>Status</center>
                                 </th>
                                 <th>
@@ -109,33 +103,42 @@
                         </tfoot>
 
                         <tbody>
+                            @foreach ($location->areas as $area)
+                                <tr>
+                                    <td align="center" width="8%">{{ $area->id }}</td>
+
+                                    <td>{{ $area->name }}</td>
+
+                                    <td>{{ $area->slug }}</td>
 
 
-                            <tr>
-                                <td align="center" width="8%">6</td>
+                                    <td align="center" width="8%">
+                                        <font color='green'>{{ $area->status == 1 ? 'Active' : 'Inactive' }}</font>
+                                    </td>
+                                    <td align="center" width="25%">
 
-                                <td>Khilghaon</td>
+                                        <a href="{{ route('admin.area.show', $area) }}"><button type="button"
+                                                class="btn btn-outline-dark btn-sm"><i class="fas fa-chart-area"></i>
+                                                Details</button></a>
 
-                                <td>khilghaon</td>
+                                        <a href="{{ route('admin.area.edit', $area) }}"><button type="button"
+                                                class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i>
+                                                Edit</button></a>
 
-                                <td>
-                                    Rajshahi </td>
+                                        <form class="d-inline" name="form1" method="POST" enctype="multipart/form-data"
+                                            action="{{ route('admin.area.destroy', $area) }}">
+                                            @csrf
+                                            @method('delete')
+                                            <button type="submit" class="btn btn-outline-danger btn-sm"><i
+                                                    class="fas fa-trash-alt"></i>
+                                                Delete</button>
+                                        </form>
 
-                                <td align="center" width="8%">
-                                    <font color='green'>Active</font>
-                                </td>
-                                <td align="center" width="25%">
+                                    </td>
+                                </tr>
+                            @endforeach
 
-                                    <a href="../../area-details/6/index.html"><button type="button"
-                                            class="btn btn-outline-dark btn-sm"><i class="fas fa-chart-area"></i>
-                                            Details</button></a>
 
-                                    <a href="../../area-edit/6/index.html"><button type="button"
-                                            class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i>
-                                            Edit</button></a>
-
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                 </div><!--table-responsive-->
@@ -143,8 +146,8 @@
             </div><!--/.card-body-->
         </div><!--/.card-->
         <!-- <a href="/city-add/">
-      <button type="button" class="btn btn-outline-primary btn-sm"><i class="fas fa-plus-circle"></i> Add</button>
-    </a> -->
+                              <button type="button" class="btn btn-outline-primary btn-sm"><i class="fas fa-plus-circle"></i> Add</button>
+                            </a> -->
 
         <a href="../../city-list/index.html">
             <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fas fa-list"></i> List</button>

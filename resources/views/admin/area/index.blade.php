@@ -5,8 +5,7 @@
 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="http://localhost/assortpropertiesltd.com/admin">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="../area-add/index.html">Add Area</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.home') }}">Dashboard</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Area List</li>
             </ol>
         </nav>
@@ -78,370 +77,38 @@
                         </tfoot>
 
                         <tbody>
+                            @foreach ($areas as $area)
+                                <tr>
+                                    <td align="center" width="8%">{{ $area->id }}</td>
+                                    <td>{{ $area->name }}</td>
+                                    <td>{{ $area->slug }}</td>
+                                    <td><a href="#" title="">{{ $area->location->name }}</a></td>
+                                    <td align="center" width="8%">
+                                        <font color='green'>Active</font>
+                                    </td>
+                                    <td align="center" width="25%">
+
+                                        <a href="{{ route('admin.area.show', $area) }}"><button type="button"
+                                                class="btn btn-outline-dark btn-sm"><i class="fas fa-chart-area"></i>
+                                                Details</button></a>
+
+                                        <a href="{{ route('admin.area.edit', $area) }}"><button type="button"
+                                                class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i>
+                                                Edit</button></a>
+                                        <form class="d-inline" name="form1" method="POST" enctype="multipart/form-data"
+                                            action="{{ route('admin.area.destroy', $area) }}">
+                                            @csrf
+                                            @method('delete')
+                                            <button type="submit" class="btn btn-outline-danger btn-sm"><i
+                                                    class="fas fa-trash-alt"></i>
+                                                Delete</button>
+                                        </form>
+
+                                    </td>
+                                </tr>
+                            @endforeach
 
-                            <tr>
-                                <td align="center" width="8%">13</td>
 
-                                <td>Dhanmondi</td>
-
-                                <td>dhanmondi</td>
-
-                                <td>
-                                    <a href="../areas/3.html" title="">
-                                        Dhaka</a>
-                                </td>
-
-                                <td align="center" width="8%">
-                                    <font color='green'>Active</font>
-                                </td>
-                                <td align="center" width="25%">
-
-                                    <a href="../area-details/13/index.html"><button type="button"
-                                            class="btn btn-outline-dark btn-sm"><i class="fas fa-chart-area"></i>
-                                            Details</button></a>
-
-                                    <a href="../area-edit/13/index.html"><button type="button"
-                                            class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i>
-                                            Edit</button></a>
-
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td align="center" width="8%">12</td>
-
-                                <td>Maniknagor</td>
-
-                                <td>maniknagor</td>
-
-                                <td>
-                                    <a href="../areas/3.html" title="">
-                                        Dhaka</a>
-                                </td>
-
-                                <td align="center" width="8%">
-                                    <font color='green'>Active</font>
-                                </td>
-                                <td align="center" width="25%">
-
-                                    <a href="../area-details/12/index.html"><button type="button"
-                                            class="btn btn-outline-dark btn-sm"><i class="fas fa-chart-area"></i>
-                                            Details</button></a>
-
-                                    <a href="../area-edit/12/index.html"><button type="button"
-                                            class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i>
-                                            Edit</button></a>
-
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td align="center" width="8%">11</td>
-
-                                <td>West Dhanmondi</td>
-
-                                <td>west-dhanmondi</td>
-
-                                <td>
-                                    <a href="../areas/3.html" title="">
-                                        Dhaka</a>
-                                </td>
-
-                                <td align="center" width="8%">
-                                    <font color='green'>Active</font>
-                                </td>
-                                <td align="center" width="25%">
-
-                                    <a href="../area-details/11/index.html"><button type="button"
-                                            class="btn btn-outline-dark btn-sm"><i class="fas fa-chart-area"></i>
-                                            Details</button></a>
-
-                                    <a href="../area-edit/11/index.html"><button type="button"
-                                            class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i>
-                                            Edit</button></a>
-
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td align="center" width="8%">10</td>
-
-                                <td>Rayer Bazar</td>
-
-                                <td>rayer-bazar</td>
-
-                                <td>
-                                    <a href="../areas/3.html" title="">
-                                        Dhaka</a>
-                                </td>
-
-                                <td align="center" width="8%">
-                                    <font color='green'>Active</font>
-                                </td>
-                                <td align="center" width="25%">
-
-                                    <a href="../area-details/10/index.html"><button type="button"
-                                            class="btn btn-outline-dark btn-sm"><i class="fas fa-chart-area"></i>
-                                            Details</button></a>
-
-                                    <a href="../area-edit/10/index.html"><button type="button"
-                                            class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i>
-                                            Edit</button></a>
-
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td align="center" width="8%">9</td>
-
-                                <td>Aftabnagar</td>
-
-                                <td>aftabnagar</td>
-
-                                <td>
-                                    <a href="../areas/3.html" title="">
-                                        Dhaka</a>
-                                </td>
-
-                                <td align="center" width="8%">
-                                    <font color='green'>Active</font>
-                                </td>
-                                <td align="center" width="25%">
-
-                                    <a href="../area-details/9/index.html"><button type="button"
-                                            class="btn btn-outline-dark btn-sm"><i class="fas fa-chart-area"></i>
-                                            Details</button></a>
-
-                                    <a href="../area-edit/9/index.html"><button type="button"
-                                            class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i>
-                                            Edit</button></a>
-
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td align="center" width="8%">8</td>
-
-                                <td>Razabazar</td>
-
-                                <td>razabazar</td>
-
-                                <td>
-                                    <a href="../areas/3.html" title="">
-                                        Dhaka</a>
-                                </td>
-
-                                <td align="center" width="8%">
-                                    <font color='green'>Active</font>
-                                </td>
-                                <td align="center" width="25%">
-
-                                    <a href="../area-details/8/index.html"><button type="button"
-                                            class="btn btn-outline-dark btn-sm"><i class="fas fa-chart-area"></i>
-                                            Details</button></a>
-
-                                    <a href="../area-edit/8/index.html"><button type="button"
-                                            class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i>
-                                            Edit</button></a>
-
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td align="center" width="8%">7</td>
-
-                                <td>Mirpur</td>
-
-                                <td>mirpur</td>
-
-                                <td>
-                                    <a href="../areas/3.html" title="">
-                                        Dhaka</a>
-                                </td>
-
-                                <td align="center" width="8%">
-                                    <font color='green'>Active</font>
-                                </td>
-                                <td align="center" width="25%">
-
-                                    <a href="../area-details/7/index.html"><button type="button"
-                                            class="btn btn-outline-dark btn-sm"><i class="fas fa-chart-area"></i>
-                                            Details</button></a>
-
-                                    <a href="../area-edit/7/index.html"><button type="button"
-                                            class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i>
-                                            Edit</button></a>
-
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td align="center" width="8%">6</td>
-
-                                <td>Khilghaon</td>
-
-                                <td>khilghaon</td>
-
-                                <td>
-                                    <a href="../areas/1.html" title="">
-                                        Rajshahi</a>
-                                </td>
-
-                                <td align="center" width="8%">
-                                    <font color='green'>Active</font>
-                                </td>
-                                <td align="center" width="25%">
-
-                                    <a href="../area-details/6/index.html"><button type="button"
-                                            class="btn btn-outline-dark btn-sm"><i class="fas fa-chart-area"></i>
-                                            Details</button></a>
-
-                                    <a href="../area-edit/6/index.html"><button type="button"
-                                            class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i>
-                                            Edit</button></a>
-
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td align="center" width="8%">5</td>
-
-                                <td>Bashundhara</td>
-
-                                <td>bashundhara</td>
-
-                                <td>
-                                    <a href="../areas/3.html" title="">
-                                        Dhaka</a>
-                                </td>
-
-                                <td align="center" width="8%">
-                                    <font color='green'>Active</font>
-                                </td>
-                                <td align="center" width="25%">
-
-                                    <a href="../area-details/5/index.html"><button type="button"
-                                            class="btn btn-outline-dark btn-sm"><i class="fas fa-chart-area"></i>
-                                            Details</button></a>
-
-                                    <a href="../area-edit/5/index.html"><button type="button"
-                                            class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i>
-                                            Edit</button></a>
-
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td align="center" width="8%">4</td>
-
-                                <td>Niketon</td>
-
-                                <td>niketon</td>
-
-                                <td>
-                                    <a href="../areas/3.html" title="">
-                                        Dhaka</a>
-                                </td>
-
-                                <td align="center" width="8%">
-                                    <font color='green'>Active</font>
-                                </td>
-                                <td align="center" width="25%">
-
-                                    <a href="../area-details/4/index.html"><button type="button"
-                                            class="btn btn-outline-dark btn-sm"><i class="fas fa-chart-area"></i>
-                                            Details</button></a>
-
-                                    <a href="../area-edit/4/index.html"><button type="button"
-                                            class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i>
-                                            Edit</button></a>
-
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td align="center" width="8%">3</td>
-
-                                <td>Banani</td>
-
-                                <td>banani</td>
-
-                                <td>
-                                    <a href="../areas/3.html" title="">
-                                        Dhaka</a>
-                                </td>
-
-                                <td align="center" width="8%">
-                                    <font color='green'>Active</font>
-                                </td>
-                                <td align="center" width="25%">
-
-                                    <a href="../area-details/3/index.html"><button type="button"
-                                            class="btn btn-outline-dark btn-sm"><i class="fas fa-chart-area"></i>
-                                            Details</button></a>
-
-                                    <a href="../area-edit/3/index.html"><button type="button"
-                                            class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i>
-                                            Edit</button></a>
-
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td align="center" width="8%">2</td>
-
-                                <td>Uttara</td>
-
-                                <td>uttara</td>
-
-                                <td>
-                                    <a href="../areas/3.html" title="">
-                                        Dhaka</a>
-                                </td>
-
-                                <td align="center" width="8%">
-                                    <font color='green'>Active</font>
-                                </td>
-                                <td align="center" width="25%">
-
-                                    <a href="../area-details/2/index.html"><button type="button"
-                                            class="btn btn-outline-dark btn-sm"><i class="fas fa-chart-area"></i>
-                                            Details</button></a>
-
-                                    <a href="../area-edit/2/index.html"><button type="button"
-                                            class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i>
-                                            Edit</button></a>
-
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td align="center" width="8%">1</td>
-
-                                <td>Gulshan</td>
-
-                                <td>gulshan</td>
-
-                                <td>
-                                    <a href="../areas/3.html" title="">
-                                        Dhaka</a>
-                                </td>
-
-                                <td align="center" width="8%">
-                                    <font color='green'>Active</font>
-                                </td>
-                                <td align="center" width="25%">
-
-                                    <a href="../area-details/1/index.html"><button type="button"
-                                            class="btn btn-outline-dark btn-sm"><i class="fas fa-chart-area"></i>
-                                            Details</button></a>
-
-                                    <a href="../area-edit/1/index.html"><button type="button"
-                                            class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i>
-                                            Edit</button></a>
-
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                 </div><!--table-responsive-->
@@ -449,8 +116,9 @@
             </div><!--/.card-body-->
         </div><!--/.card-->
 
-        <a href="../area-add/index.html"><button type="button" class="btn btn-outline-primary btn-sm"><i
-                    class="fas fa-plus-circle"></i> Add</button></a>
+        <a href="{{ route('admin.area.create') }}">
+            <button type="button" class="btn btn-outline-primary btn-sm"><i class="fas fa-plus-circle"></i>
+                Add</button></a>
 
     </div>
 @endsection
