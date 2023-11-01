@@ -5,14 +5,14 @@
 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="http://localhost/assortpropertiesltd.com/admin">Dashboard</a></li>
-                <!-- <li class="breadcrumb-item"><a href="/city-add/">Add City</a></li> -->
+                <li class="breadcrumb-item"><a href="{{ route('admin.home') }}">Dashboard</a></li>
                 <li class="breadcrumb-item active" aria-current="page">City List</li>
             </ol>
         </nav>
 
         <div class="card shadow mb-4">
-            <div class="card-header text-center"><i class="fas fa-list"></i> City List (65)</div><!--/.card-header-->
+            <div class="card-header text-center"><i class="fas fa-list"></i> City List ({{ $locations->count() }})</div>
+            <!--/.card-header-->
             <div class="card-body">
 
 
@@ -75,14 +75,14 @@
 
                             @foreach ($locations as $location)
                                 <tr>
-                                    <td align="center" width="8%">1</td>
+                                    <td align="center" width="8%">{{ $location->id }}</td>
 
-                                    <td>Rajshahi</td>
+                                    <td>{{ $location->name }}</td>
 
-                                    <td>rajshahi</td>
+                                    <td>{{ $location->slug }}</td>
 
                                     <td align="center" width="8%">
-                                        <font color='green'><b>Active</b></font>
+                                        <font color='green'><b>{{ $location->status ? 'Active' : 'Inactive' }}</b></font>
                                     </td>
                                     <td align="center" width="25%">
 

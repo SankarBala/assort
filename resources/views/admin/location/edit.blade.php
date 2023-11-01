@@ -12,11 +12,8 @@
         </nav>
 
         <div class="card shadow mb-4">
-            <div class="card-header text-center"><i class="fas fa-edit"></i> City Edit</div><!--/.card-header-->
+            <div class="card-header text-center"><i class="fas fa-edit"></i> City Edit</div>
             <div class="card-body">
-
-
-
 
                 <form name="form1" method="POST" action="{{ route('admin.location.update', $location) }}">
                     @method('put')

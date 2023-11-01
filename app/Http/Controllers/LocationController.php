@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Location;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class LocationController extends Controller
 {
@@ -31,7 +32,7 @@ class LocationController extends Controller
     {
         $location = new Location();
         $location->name = $request->name;
-        $location->slug = $request->slug;
+        $location->slug = Str::slug($request->name);
         $location->status = $request->status;
         $location->save();
         session()->flash('message', 'Location created successfully');

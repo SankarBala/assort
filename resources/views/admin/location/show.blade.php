@@ -43,7 +43,7 @@
                         <font size="3" color="#808080"><b>Status</b></font>
                     </div>
                     <div class="col-sm-10">
-                        <font color='green'>{{ $location->id }}</font>
+                        <font color=''>{{ $location->status ? 'Active' : 'Inactive' }}</font>
                     </div>
                 </div>
 
@@ -146,18 +146,18 @@
             </div><!--/.card-body-->
         </div><!--/.card-->
         <!-- <a href="/city-add/">
-                              <button type="button" class="btn btn-outline-primary btn-sm"><i class="fas fa-plus-circle"></i> Add</button>
-                            </a> -->
+                                  <button type="button" class="btn btn-outline-primary btn-sm"><i class="fas fa-plus-circle"></i> Add</button>
+                                </a> -->
 
-        <a href="../../city-list/index.html">
+        <a href="{{ route('admin.location.index') }}">
             <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fas fa-list"></i> List</button>
         </a>
 
-        <a href="../../city-edit/1/index.html">
+        <a href="{{ route('admin.location.edit', $location) }}">
             <button type="button" class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i> Edit</button>
         </a>
 
-        <a href="../../areas/1/index.html">
+        <a href="">
             <button type="button" class="btn btn-outline-success btn-sm"><i class="fas fa-image"></i> Areas</button>
         </a>
 
