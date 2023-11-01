@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ProjectType;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ProjectTypeController extends Controller
 {
@@ -12,6 +13,7 @@ class ProjectTypeController extends Controller
      */
     public function index()
     {
+        view()->share('project_types', ProjectType::all());
         return view('admin.project_type.index');
     }
 
@@ -28,9 +30,13 @@ class ProjectTypeController extends Controller
      */
     public function store(Request $request)
     {
-        ProjectType::create($request->all());
+        $projectType = new ProjectType();
+        $projectType->name = $request->name;
+        $projectType->slug = Str::slug($request->name);
+        $projectType->status = 1;
+        $projectType->save();
         session()->flash('message', 'Successfully created');
-        return redirect()->route('admin.project_type.index');
+        return redirect()->route('admin.project-type.index');
     }
 
     /**
@@ -38,6 +44,7 @@ class ProjectTypeController extends Controller
      */
     public function show(ProjectType $projectType)
     {
+        view()->share('project_type', $projectType);
         return view('admin.project_type.show');
     }
 
@@ -46,6 +53,7 @@ class ProjectTypeController extends Controller
      */
     public function edit(ProjectType $projectType)
     {
+        view()->share('project_type', $projectType);
         return view('admin.project_type.edit');
     }
 
@@ -54,7 +62,10 @@ class ProjectTypeController extends Controller
      */
     public function update(Request $request, ProjectType $projectType)
     {
-        $projectType->update($request->all());
+        $projectType->name = $request->name;
+        $projectType->slug = $request->slug;
+        $projectType->status = $request->status;
+        $projectType->save();
         session()->flash('message', 'Successfully updated');
         return redirect()->back();
     }
@@ -66,6 +77,6 @@ class ProjectTypeController extends Controller
     {
         $projectType->delete();
         session()->flash('message', 'Successfully deleted');
-        return redirect()->route('admin.project_type.index');
+        return redirect()->route('admin.project-type.index');
     }
 }

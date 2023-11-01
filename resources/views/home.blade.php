@@ -7,9 +7,10 @@
 
                 <div class="owl-carousel owl-2">
                     @foreach ($projects->take(6) as $project)
-                        <div class="media-29101">
+                        <div class=" p-2 bg-light">
                             <a href="{{ route('project', $project) }}">
-                                <img src="{{ asset($project->photo) }}" alt="image" class="img-fluid" />
+                                <img src="{{ asset($project->photo) }}" alt="image" class="" height="500px" />
+                                {{-- <h3 class="position-absolute">{{$project->name}}</h3> --}}
                             </a>
                         </div>
                     @endforeach
@@ -20,7 +21,7 @@
     </div>
     <section id="projects">
         @foreach ($project_types as $project_type)
-            @if (!$project_type->projects->isEmpty())
+            @if (!$project_type->projects->where('status', 1)->isEmpty())
                 @php($anyProject = true)
                 <div class="container">
                     <center>
@@ -28,12 +29,12 @@
                     </center>
                     <div class="row">
 
-                        @foreach ($project_type->projects->take(3) as $project)
+                        @foreach ($project_type->projects->where('status', 1)->take(3) as $project)
                             <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="latest-post">
                                     <div class="latest-post-media">
                                         <a href="{{ route('project', $project) }}" class="latest-post-img">
-                                            <img loading="lazy" class="img-fluid" src="{{ asset($project->photo) }}"
+                                            <img loading="lazy" height="500px" src="{{ asset($project->photo) }}"
                                                 alt="img">
                                         </a>
                                         <div class="imgname">
@@ -41,7 +42,7 @@
                                         </div>
                                         <div class="d-flex justify-content-between mt-2">
                                             <div class="my-1">
-                                                {{ $project->address }}
+                                                <small> {{ $project->address }}</small>
                                             </div>
                                             <div class="">
                                                 <a href="{{ route('project', $project) }}" />
@@ -66,7 +67,7 @@
         @isset($anyProject)
         @else
             <div class="general-btn text-center mt-2 mb-4">
-               <h3>Not any project found.</h3>
+                <h3>Not any project found.</h3>
             </div>
         @endisset
     </section>

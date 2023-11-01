@@ -17,7 +17,7 @@ class BaseController extends Controller
     public function __construct()
     {
         view()->share('project_types', ProjectType::all());
-        view()->share('projects', Project::all());
+        view()->share('projects', Project::where('status', 1)->get());
         view()->share('locations', Location::all());
         view()->share('areas', Area::all());
         view()->share('site', Site::find(1));
@@ -107,9 +107,12 @@ class BaseController extends Controller
     {
         view()->share(
             'searched_projects',
-            Project::where('project_type_id', $request->project_type_id)
-                ->orWhere('location_id', $request->location_id)
-                ->orWhere('area_id', $request->area_id)->get()
+            Project::where('status', 1)
+                ->where(function ($query) use ($request) {
+                    $query->where('project_type_id', $request->project_type_id)
+                        ->orWhere('location_id', $request->location_id)
+                        ->orWhere('area_id', $request->area_id);
+                })->get()
         );
         return view('search');
     }

@@ -13,14 +13,14 @@
                         <div class="latest-post">
                             <div class="latest-post-media">
                                 <a href="{{ route('project', $project) }}" class="latest-post-img">
-                                    <img loading="lazy" class="img-fluid" src="{{ asset($project->photo) }}" alt="img">
+                                    <img loading="lazy" height="500px" src="{{ asset($project->photo) }}" alt="img">
                                 </a>
                                 <div class="imgname">
                                     <a href="{{ route('project', $project) }}">{{ $project->name }}</a>
                                 </div>
                                 <div class="d-flex justify-content-between mt-2">
                                     <div class="my-1">
-                                        {{ $project->address }}
+                                        <small> {{ $project->address }}</small>
                                     </div>
                                     <div class="">
                                         <a href="{{ route('project', $project) }}" />

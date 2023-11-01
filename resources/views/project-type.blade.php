@@ -19,12 +19,12 @@
                 <h1 align="center">{{ $project_type->name }}</h1>
 
                 <div class="row">
-                    @foreach ($project_type->projects as $project)
+                    @foreach ($project_type->projects->where('status', 1)->all() as $project)
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="latest-post">
                                 <div class="latest-post-media">
                                     <a href="{{ route('project', $project) }}" class="latest-post-img">
-                                        <img loading="lazy" class="img-fluid" src="{{ asset($project->photo) }}"
+                                        <img loading="lazy" height="500px" src="{{ asset($project->photo) }}"
                                             alt="img">
                                     </a>
 
@@ -33,7 +33,7 @@
                                     </div>
                                     <div class="d-flex justify-content-between mt-2">
                                         <div class="my-1">
-                                            {{ $project->address }}
+                                            <small> {{ $project->address }}</small>
                                         </div>
                                         <div class="">
                                             <a href="{{ route('project', $project) }}" />
