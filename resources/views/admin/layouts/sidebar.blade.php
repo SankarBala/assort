@@ -53,7 +53,7 @@
             </div>
         </div>
     </li>
-{{-- 
+    {{-- 
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseGalleryPhotos"
             aria-expanded="true" aria-controls="collapseGalleryPhotos">
@@ -124,7 +124,7 @@
         </div>
     </li>
 
-    <li class="nav-item">
+    {{-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAdmins"
             aria-expanded="true" aria-controls="collapseAdmins">
             <i class="fas fa-user-cog"></i>
@@ -137,7 +137,7 @@
                 <a class="collapse-item" href="{{ route('admin.user.index') }}">Admin List</a>
             </div>
         </div>
-    </li>
+    </li> --}}
 
     <hr class="sidebar-divider">
 

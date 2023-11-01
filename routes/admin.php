@@ -23,7 +23,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [AdminController::class, 'home'])->name('home');
 Route::get('/site-details', [AdminController::class, 'site_details'])->name('site-details');
 Route::get('/site-edit', [AdminController::class, 'site_edit'])->name('site-edit');
+Route::put('/site-update/{site}', [AdminController::class, 'site_update'])->name('site-update');
 Route::get('/site-logo', [AdminController::class, 'site_logo'])->name('site-logo');
+Route::put('/site-logo', [AdminController::class, 'site_logo_update'])->name('site-logo-update');
 
 Route::resource('project', ProjectController::class)->names('project');
 Route::get('/project/{project:slug}/photo', [ProjectController::class, 'photo'])->name('project.photo.show');

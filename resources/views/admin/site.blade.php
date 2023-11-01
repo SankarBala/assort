@@ -152,10 +152,10 @@
             </div><!--/.card-body-->
         </div><!--/.card-->
 
-        <a href="../../site-edit/1/index.html">
+        <a href="{{route('admin.site-edit')}}">
             <button type="button" class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i> Edit</button>
         </a>
-        <a href="../../site-logo/1/index.html">
+        <a href="{{route('admin.site-logo')}}">
             <button type="button" class="btn btn-outline-warning btn-sm"><i class="fas fa-image"></i> Logo</button>
         </a>
 
