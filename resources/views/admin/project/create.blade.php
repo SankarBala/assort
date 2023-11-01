@@ -177,6 +177,14 @@
 
                     <div class="row">
                         <div class="col-sm-2">
+                            <font size="3" color="#808080"><b>Land Area</b></font>
+                        </div>
+                        <div class="col-sm-10"><input name="land_area" type="text" class="form-control"
+                                placeholder="" value="" /></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-2">
                             <font size="3" color="#808080"><b>Hand Over</b></font>
                         </div>
                         <div class="col-sm-10">

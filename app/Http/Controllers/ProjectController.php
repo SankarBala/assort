@@ -77,6 +77,7 @@ class ProjectController extends Controller
         $project->substation = $request->substation;
         $project->generator = $request->generator;
         $project->unit = $request->unit;
+        $project->land_area = $request->land_area;
         $project->hand_over = $request->hand_over;
         $project->details = $request->details;
         $project->featured = $request->featured;
@@ -138,6 +139,7 @@ class ProjectController extends Controller
         $project->substation = $request->substation;
         $project->generator = $request->generator;
         $project->unit = $request->unit;
+        $project->land_area = $request->land_area;
         $project->hand_over = $request->hand_over;
         $project->details = $request->details;
         $project->featured = $request->featured;

@@ -54,7 +54,8 @@
             </div><!--/.card-body-->
         </div><!--/.card-->
         <div class="card shadow mb-4">
-            <div class="card-header text-center"><i class="fas fa-list"></i> Project Photo List (1)</div>
+            <div class="card-header text-center"><i class="fas fa-list"></i> Project Photo List
+                ({{ $project->galleries->count() }})</div>
             <!--/.card-header-->
             <div class="card-body">
 

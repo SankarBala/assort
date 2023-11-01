@@ -28,13 +28,15 @@ return new class extends Migration
             $table->string('substation')->nullable();
             $table->string('generator')->nullable();
             $table->string('unit')->nullable();
+            $table->string('land_area')->nullable();
+            $table->string('extra_1')->nullable();
+            $table->string('extra_2')->nullable();
+            $table->string('extra_3')->nullable();
             $table->string('hand_over')->nullable();
             $table->string('details')->nullable();
             $table->string('photo')->nullable();
             $table->string('created_by')->default(1);
             $table->string('updated_by')->default(1);
-            // $table->string('add_date')->nullable();
-            // $table->string('update_date')->nullable();
             $table->string('featured')->default(0);
             $table->integer('views')->default(0);
             $table->string('status')->default(1);
