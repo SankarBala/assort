@@ -28,7 +28,7 @@
                             <select name="project_type_id" class="form-control">
                                 @foreach ($project_types as $type)
                                     <option value="{{ $type->id }}"
-                                        {{ $type->id == $project->type_id ? 'selected' : '' }}>{{ $type->name }}
+                                        {{ $type->id == $project->project_type_id ? 'selected' : '' }}>{{ $type->name }}
                                     </option>
                                 @endforeach
                             </select>
@@ -125,7 +125,7 @@
                             <font size="3" color="#808080"><b>Parking</b></font>
                         </div>
                         <div class="col-sm-10"><input type="text" name="parking" class="form-control" id="text"
-                                placeholder="" value="">{{ $project->parking }}</div>
+                                placeholder="" value="{{ $project->parking }}" /></div>
                     </div>
 
                     <div class="row">
@@ -133,7 +133,7 @@
                             <font size="3" color="#808080"><b>Height</b></font>
                         </div>
                         <div class="col-sm-10"><input type="text" name="height" class="form-control" id="text"
-                                placeholder="" value="">{{ $project->height }}</div>
+                                placeholder="" value="{{ $project->height }}" /></div>
                     </div>
 
                     <div class="row">
@@ -141,7 +141,7 @@
                             <font size="3" color="#808080"><b>Lift</b></font>
                         </div>
                         <div class="col-sm-10"><input type="text" name="lift" class="form-control" id="text"
-                                placeholder="" value="">{{ $project->lift }}</div>
+                                placeholder="" value="{{ $project->lift }}" /></div>
                     </div>
 
                     <div class="row">
@@ -185,7 +185,7 @@
                             <font size="3" color="#808080"><b>Hand Over</b></font>
                         </div>
                         <div class="col-sm-10"><input type="text" name="hand_over" class="form-control"
-                                id="text" placeholder="" value="">{{ $project->hand_over }}</div>
+                                id="text" placeholder="" value="{{ $project->hand_over }}" /></div>
                     </div>
 
                     <div class="row">
@@ -254,7 +254,10 @@
         </a>
 
         <a href="{{ route('admin.project.show', $project) }}">
-            <button type="button" class="btn btn-outline-warning btn-sm"><i class="fas fa-image"></i> Photo</button>
+            <button type="button" class="btn btn-outline-success btn-sm"><i class="fas fa-eye"></i> Show</button>
+        </a>
+        <a href="{{ route('admin.project.photo.show', $project) }}">
+            <button type="button" class="btn btn-outline-danger btn-sm"><i class="fas fa-image"></i>Photo</button>
         </a>
 
     </div>
