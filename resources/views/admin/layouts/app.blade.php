@@ -65,10 +65,10 @@
 
                                 <img src='{{ asset('images/admins/1698350255-file-removebg-preview.png') }}'
                                     class='img-profile rounded-circle img-responsive'> </a>
-                            <!-- Dropdown - User Information -->
-                            {{-- <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="{{route('admin.home')}}">
+                                {{-- <a class="dropdown-item" href="{{route('admin.home')}}">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
@@ -79,13 +79,21 @@
                                 <a class="dropdown-item" href="changepassword/index.html">
                                     <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Change Password
-                                </a>
+                                </a> --}}
                                 <div class="dropdown-divider"></div>
+
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    <form class="d-inline" name="form1" method="POST" enctype="multipart/form-data"
+                                        action="{{ route('logout') }}">
+                                        @csrf
+                                        <button type="submit" class="btn btn-link btn-sm text-danger">
+                                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                            Logout</button>
+                                    </form>
                                 </a>
-                            </div> --}}
+
+                            </div>
+
                         </li>
 
                     </ul>
