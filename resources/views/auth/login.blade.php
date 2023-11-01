@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <title>Admin Login - Assort Properties LTD</title>
 
-    <link href="https://assortpropertiesltd.com/admin/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="https://assortpropertiesltd.com/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
