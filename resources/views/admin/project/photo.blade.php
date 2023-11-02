@@ -5,9 +5,9 @@
 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="../../index.html">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="../../project-add/index.html">Add Project</a></li>
-                <li class="breadcrumb-item"><a href="../../project-list/index.html">Project List</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.home') }}">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.project.index') }}">Project List</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.project.show', $project) }}">Project</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Project Photo</li>
             </ol>
         </nav>
@@ -16,7 +16,7 @@
             <div class="card-header text-center"><i class="fas fa-image"></i> Project Photo</div><!--/.card-header-->
             <div class="card-body">
 
-                <h3><small>Name:</small> Assort Hafsha Manor</h3><br>
+                <h3><small>Name:</small>{{ $project->name }}</h3><br>
 
                 <table class="table table-striped table-bordered">
                     <tbody>

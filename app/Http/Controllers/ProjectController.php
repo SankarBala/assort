@@ -84,7 +84,7 @@ class ProjectController extends Controller
         $project->photo =  $url ?? null;
         $project->save();
 
-        session()->flush('message', 'Project successfully created.');
+        session()->flash('message', 'Project successfully created.');
         return redirect()->route('admin.project.index');
     }
 
@@ -147,7 +147,7 @@ class ProjectController extends Controller
         $project->status =  $request->status;
         $project->update();
 
-        session()->flush('message', 'Project successfully updated.');
+        session()->flash('message', 'Project successfully updated.');
         return redirect()->route('admin.project.index');
     }
 
@@ -158,7 +158,7 @@ class ProjectController extends Controller
     {
         $project->delete();
 
-        session()->flush('message', 'Project successfully deleted.');
+        session()->flash('message', 'Project successfully deleted.');
         return redirect()->back();
     }
 
@@ -181,16 +181,16 @@ class ProjectController extends Controller
 
         $project->photo = $url ?? $project->photo;
         $project->save();
-        session()->flush('message', 'Photo successfully updated.');
+        session()->flash('message', 'Photo successfully updated.');
         return redirect()->route('admin.project.photo.show', $project);
     }
 
     public function photo_delete(Project $project)
     {
-        $project->photo = null;
+        $project->photo = "";
         $project->save();
-        session()->flush('message', 'Photo successfully deleted.');
-        return redirect()->route('admin.project.photo.show', $project);
+        session()->flash('message', 'Photo successfully deleted.');
+        return redirect()->back();
     }
 
 
@@ -226,7 +226,7 @@ class ProjectController extends Controller
         ]);
 
 
-        session()->flush('message', 'Photo successfully added.');
+        session()->flash('message', 'Photo successfully added.');
         return redirect()->back();
     }
 

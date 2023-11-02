@@ -63,7 +63,7 @@ class BaseController extends Controller
         $flatBuySale->width = $request->road_width;
         $flatBuySale->save();
 
-        session()->flush('message', 'Request successfully sent.');
+        session()->flash('message', 'Request successfully sent.');
         return redirect()->back();
     }
 
@@ -81,7 +81,7 @@ class BaseController extends Controller
         $flatBuySale->flat_size = $request->flat_size;
         $flatBuySale->save();
 
-        session()->flush('message', 'Request successfully sent.');
+        session()->flash('message', 'Request successfully sent.');
         return redirect()->back();
     }
 
