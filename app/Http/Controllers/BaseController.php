@@ -103,17 +103,28 @@ class BaseController extends Controller
         return view('project-type');
     }
 
-    public function search(Request $request)
+    public function search()
     {
-        view()->share(
-            'searched_projects',
-            Project::where('status', 1)
-                ->where(function ($query) use ($request) {
-                    $query->where('project_type_id', $request->project_type_id)
-                        ->orWhere('location_id', $request->location_id)
-                        ->orWhere('area_id', $request->area_id);
-                })->get()
-        );
+        $projectTypeId = request('project_type_id');
+        $locationId = request('location_id');
+        $areaId = request('area_id');
+
+        $query = Project::where('status', 1);
+
+        if ($projectTypeId != 0) {
+            $query->where('project_type_id', $projectTypeId);
+        }
+        if ($locationId != 0) {
+            $query->where('location_id', $locationId);
+        }
+
+        if ($areaId != 0) {
+            $query->where('area_id', $areaId);
+        }
+
+        $results = $query->get();
+
+        view()->share('searched_projects', $results);
         return view('search');
     }
 }

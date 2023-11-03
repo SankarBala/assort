@@ -123,7 +123,6 @@ body {
 	position: relative;
 	overflow: hidden;
 	min-height: 100vh;
-	opacity: 0;
 }
 
 .page.fadeIn {
@@ -2401,7 +2400,6 @@ strong {
 .section-full {
 	padding-top: 72px;
 	padding-bottom: 29px;
-	background-image: url("../modernstate/images/elements-1.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -11762,7 +11760,7 @@ html.ie-11 {
 
 @media (min-width: 768px) and (max-width: 1799px) {
 	.header_corporate .rd-navbar-fullwidth .rd-navbar-nav-wrap {
-		border-top: 1px solid #e7e7e7;
+		/* border-top: 1px solid #e7e7e7; */
 		padding: 10px 15px;
 		max-width: 1200px;
 	}
@@ -14094,7 +14092,7 @@ button.swiper-pagination-bullet {
 .swiper-button-next:before,
 .swiper-button-prev:before {
 	display: inline-block;
-	font-size: 48px;
+	font-size: 28px;
 	font-family: "Material Design Icons";
 	color: #8f8f8f;
 	transition: 250ms;
@@ -14115,7 +14113,8 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-button-next:before {
-	content: "\f14f";
+	content: "\2329";
+	transform: scaleX(-1);
 }
 
 .swiper-button-prev {
@@ -14123,7 +14122,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-button-prev:before {
-	content: "\f14a";
+	content: "\2329";
 }
 
 @media (min-width: 1600px) {
