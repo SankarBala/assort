@@ -643,7 +643,7 @@ dl.terms-list dd + dt {
 }
 
 a.text-primary:hover {
-	color: #EF5A00;
+	color: #00efbb;
 }
 
 /*Main Layout*/
@@ -2242,7 +2242,7 @@ strong {
 }
 
 .page-foot a.text-primary {
-	color: #fc8816;
+	color: #16affc;
 }
 
 .page-foot a.text-primary:hover {

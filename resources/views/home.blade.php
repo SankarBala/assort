@@ -8,13 +8,13 @@
                     @php($anyProject = true)
                     <div class="container">
                         <h3>{{ $project_type->name }}</h3>
-                        <hr />
                         <div class="row clearleft-custom">
                             @foreach ($project_type->projects->where('status', 1)->take(3) as $project)
                                 <div class="col-12 col-md-6 col-lg-4">
                                     <div class="thumbnail thumbnail-3">
                                         <a class="img-link" href="{{ route('project', $project) }}">
-                                            <img src="{{ asset($project->photo) }}" alt="" style="height:400px" /></a>
+                                            <img src="{{ asset($project->photo) }}" alt=""
+                                                style="height:400px" /></a>
                                         <div class="caption">
                                             <h4>
                                                 <a class="text-sushi" href="{{ route('project', $project) }}">
@@ -47,8 +47,8 @@
 
                         </div>
 
-                        <div>
-                            <a class="btn btn-sm btn-sushi offset-custom-11"
+                        <div class="mb-5">
+                            <a class="btn btn-sm btn-sushi offset-custom-11 "
                                 href="{{ route('project-type', $project_type) }}">All {{ $project_type->name }}</a>
 
                         </div>

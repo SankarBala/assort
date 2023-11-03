@@ -20,7 +20,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-7 col-lg-7">
-                        <!-- Slick Carousel-->
+
                         <div class="slick-slider carousel-parent" data-arrows="true" data-loop="false" data-dots="false"
                             data-swipe="true" data-sm-items="1" data-lightgallery="group" data-child="#child-carousel"
                             data-for=".thumbnail-carousel">
@@ -45,8 +45,6 @@
                                 </div>
                             @endforeach
                         </div>
-
-
 
                         <div class="row">
                             <div class="col-12 text-justify">

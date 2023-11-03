@@ -1,7 +1,7 @@
  <!-- Page Footer-->
  <footer class="page-foot text-start bg-gray mt-4">
      <section class="footer-content">
-         <div class="container">
+         <div class="container-fluid">
              <div class="row flow-offset-3">
                  <div class="col-12 col-md-6 col-xl-3">
                      <div class="rd-navbar-brand"><a class="brand-name" href="{{ route('home') }}"><img
