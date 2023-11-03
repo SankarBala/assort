@@ -2,8 +2,19 @@
 
 @section('content')
     <main class="page-content">
+        <section class="section-full pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ol class="breadcrumb">
+                            <li><a href="{{ route('home') }}">Home</a></li>
+                            <li class="">Search</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="section-lg text-center text-md-start">
-
             <div class="container">
                 <h3>Searched Project</h3>
                 <hr />

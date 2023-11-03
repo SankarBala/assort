@@ -1,5 +1,5 @@
  <!-- Page Footer-->
- <footer class="page-foot text-start bg-gray mt-2">
+ <footer class="page-foot text-start bg-gray mt-4">
      <section class="footer-content">
          <div class="container">
              <div class="row flow-offset-3">
@@ -13,10 +13,10 @@
 
                  <div class="col-12 col-md-6 col-xl-3">
                      <h6 class="text-ubold">Contact Us</h6>
-                     <h6 class="text-ubold text-primary text-uppercase">{{ env('APP_NAME') }}</h6>
+                     {{-- <h6 class="text-ubold text-primary text-uppercase">{{ env('APP_NAME') }}</h6> --}}
                      <address class="address">
                          <dl>
-                             <dt><span class="text-info">Head Office:</span></br>
+                             <dt><span class="text-white">Head Office:</span></br>
                                  Assort Properties Ltd Address: House-262/1 (3rd floor), Road No-10/A,West
                                  Dhanmondi,Dhaka-1209</dd>
                          </dl>

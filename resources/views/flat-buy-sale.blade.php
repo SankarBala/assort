@@ -2,7 +2,18 @@
 
 @section('content')
     <main class="page-content text-start">
-        @include('layouts.breadcrumb')
+        <section class="section-full pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ol class="breadcrumb">
+                            <li><a href="{{ route('home') }}">Home</a></li>
+                            <li>Buy or Sale Flat</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
         <div class="container">
             <div class="row">
                 <div class="text-dark">

@@ -2,7 +2,20 @@
 
 @section('content')
     <main class="page-content">
-        <section class="section-lg text-center text-md-start">
+        <section class="section-full pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ol class="breadcrumb">
+                            <li><a href="{{ route('home') }}">Home</a></li>
+                            <li><a href="{{ route('projects') }}">Projects</a></li>
+                            <li class="">{{ $project_type->name }}</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="text-center text-md-start">
 
             <div class="container">
                 <h3>{{ $project_type->name }}</h3>
@@ -44,7 +57,7 @@
                     @endforeach
 
                 </div>
-{{-- 
+                {{-- 
                 <div>
                     <a class="btn btn-sm btn-sushi offset-custom-11" href="{{ route('project-type', $project_type) }}">All
                         {{ $project_type->name }}</a>

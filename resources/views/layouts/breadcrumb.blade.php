@@ -3,7 +3,7 @@
           <div class="row">
               <div class="col-12">
                   <ol class="breadcrumb">
-                      @yield('breadcrumbs')
+                     nnnnn
                   </ol>
               </div>
           </div>

@@ -1,6 +1,6 @@
   <!--Swiper-->
   <section>
-      <div class="swiper-container swiper-slider swiper-slider-1">
+      <div class="swiper-container swiper-slider swiper-slider-1 pt-2">
           <div class="swiper-wrapper">
               @foreach ($project_types->find(1)->projects()->where('status', 1)->take(3)->get() as $project)
                   <div class="swiper-slide" data-slide-bg="{{ asset($project->photo) }}">

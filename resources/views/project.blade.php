@@ -2,7 +2,20 @@
 
 @section('content')
     <main class="page-content text-start">
-        @include('layouts.breadcrumb')
+        <section class="section-full pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ol class="breadcrumb">
+                            <li><a href="{{ route('home') }}">Home</a></li>
+                            <li><a href="{{ route('projects') }}">Projects</a></li>
+                            <li class="">{{ $project->name }}</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section-md section-md-mod-2 pt-2">
             <div class="container">
                 <div class="row">
@@ -152,10 +165,4 @@
     <div class="pt-5 mt-5">
         @include('layouts.finder')
     </div>
-@endsection
-
-@section('breadcrumbs')
-    <li><a href="{{ route('home') }}">Home</a></li>
-    <li><a href="{{ route('projects') }}">Projects</a></li>
-    <li class="">{{ $project->name }}</li>
 @endsection
